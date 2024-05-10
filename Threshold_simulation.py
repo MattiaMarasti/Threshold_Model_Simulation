@@ -47,14 +47,14 @@ for sim in range(num_simulations):
     fraction_infected = threshold_model(G, steps, spin, threshold, seed)
     fraction_infected1 = threshold_model(G1, steps, spin1, threshold_1, seed1)
     
-    # Plot per il grafo di Erdos-Renyi
+    # Plot the simulation on the Erdos Renyi graph
     axs[sim, 0].plot(range(steps + 1), fraction_infected, linewidth=3, color="red", label="Erdos Renyi")
     axs[sim, 0].set_ylabel("Contagiati")
     axs[sim, 0].set_xlabel("Tempo")
     axs[sim, 0].set_title(f"Simulazione {sim+1}")
     axs[sim, 0].legend()
     
-    # Plot per il grafo di Barabasi-Albert
+    # Plot the simulation on the Albert Barabasi Graph
     axs[sim, 1].plot(range(steps + 1), fraction_infected1, linewidth=3, color="skyblue", label="Barabasi Albert")
     axs[sim, 1].set_ylabel("Contagiati")
     axs[sim, 1].set_xlabel("Tempo")
